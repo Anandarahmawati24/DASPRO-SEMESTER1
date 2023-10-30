@@ -24,11 +24,10 @@ public class LinearSearch04 {
                 break;
             }
         }
-
         if (hasil != -1) {
             System.out.println("Key ditemukan dalam array pada posisi indeks ke-" + hasil);
         } else {
-            System.out.println("Key tidak ditemukan dalam array.");
+            System.out.println("Key tidak ditemukan dalam array");
         }
     }
 }
