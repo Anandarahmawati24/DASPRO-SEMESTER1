@@ -41,7 +41,6 @@ public class BioskopWithScanner4 {
                 default:
                     System.out.println("Menu tidak valid. Silakan pilih 1, 2, atau 3.");
             }
-
             System.out.print("Lanjutkan? (y/n): ");
             String selanjutnya = input04.nextLine();
             if (selanjutnya.equalsIgnoreCase("n")) {

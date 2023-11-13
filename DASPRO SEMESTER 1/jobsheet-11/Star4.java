@@ -6,7 +6,7 @@ public class Star4 {
         System.out.print("masukkan nilai N =");
         int N = input04.nextInt();
 
-        for(int i=1;i<=N; i--){
+        for(int i=1;i<=N; i++){
             System.out.print("*");
        }
     }
