@@ -34,8 +34,17 @@ public class BioskopWithScanner4 {
                         input04.nextLine();
                         if (kolom < 1 || kolom > 2) {
                             System.out.println("Nomor kolom tidak tersedia. Harap masukkan nomor kolom antara 1 - 2.");
+                        } else if (penonton[baris - 1][kolom - 1] != null) {
+                            System.out.println("Kursi sudah terisi. Silakan pilih kursi lain.");
+                            
+                            System.out.print("Masukkan baris (1-4): ");
+                            baris = input04.nextInt();
+                            input04.nextLine();
+                            System.out.print("Masukkan kolom (1-2): ");
+                            kolom = input04.nextInt();
+                            input04.nextLine();
                         }
-                    } while (kolom < 1 || kolom > 2);
+                    } while (kolom < 1 || kolom > 2 || penonton[baris - 1][kolom - 1] != null);
                     penonton[baris - 1][kolom - 1] = nama;
                     System.out.println("Data penonton berhasil dimasukkan.");
                     break;
