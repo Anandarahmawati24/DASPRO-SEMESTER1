@@ -36,7 +36,7 @@ public class BioskopWithScanner4 {
                             System.out.println("Nomor kolom tidak tersedia. Harap masukkan nomor kolom antara 1 - 2.");
                         } else if (penonton[baris - 1][kolom - 1] != null) {
                             System.out.println("Kursi sudah terisi. Silakan pilih kursi lain.");
-                            
+
                             System.out.print("Masukkan baris (1-4): ");
                             baris = input04.nextInt();
                             input04.nextLine();
@@ -49,10 +49,14 @@ public class BioskopWithScanner4 {
                     System.out.println("Data penonton berhasil dimasukkan.");
                     break;
                 case 2:
-                    System.out.println("Daftar Penonton:");
+                System.out.println("Daftar Penonton:");
                     for (int i = 0; i < penonton.length; i++) {
-                        for (int a = 0; a< penonton[i].length; a++) {
-                            System.out.println("Baris " + (i + 1) + ", Kolom " + (a + 1) + ": " + penonton[i][a]);
+                        for (int a = 0; a < penonton[i].length; a++) {
+                            if (penonton[i][a] == null) {
+                                System.out.println("Baris " + (i + 1) + ", Kolom " + (a + 1) + ": ***");
+                            } else {
+                                System.out.println("Baris " + (i + 1) + ", Kolom " + (a + 1) + ": " + penonton[i][a]);
+                            }
                         }
                     }
                     break;
