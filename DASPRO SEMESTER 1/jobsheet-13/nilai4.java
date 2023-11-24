@@ -1,18 +1,27 @@
 import java.util.Scanner;
 public class nilai4 {
 
-    static int jumlahMahasiswa = 5;
-    static int jumlahMinggu = 7;
+    static int jumlahMahasiswa;
+    static int jumlahMinggu;
     static int nilaiTertinggi = 0;
     static int mingguNilaiTertinggi = 0;
 
     private static int[][] nilaiMahasiswa = new int[jumlahMahasiswa][jumlahMinggu];
 
     public static void main(String[] args) {
+        inputJumlahTugasMhs();
         jumlahNilaiMahasiswa();
         tampilNilaiMahasiswa();
         NilaiTertinggi();
         tampilMahasiswaNilaiTertinggi();
+    }
+    private static void inputJumlahTugasMhs(){
+        Scanner input= new Scanner(System.in);
+        System.out.println("Masukkan jumlah mahasiswa: ");
+        jumlahMahasiswa=input.nextInt();
+        System.out.println("Masukkan jumlah tugas per minggu: ");
+        jumlahMinggu=input.nextInt();
+        nilaiMahasiswa= new int [jumlahMahasiswa][jumlahMinggu];
     }
 
     private static void jumlahNilaiMahasiswa() {
